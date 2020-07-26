@@ -60,6 +60,7 @@
     firefox
     firefox-wayland
     frotz
+    geoclue2
     git
     gnupg1
     lesspass-cli
@@ -90,7 +91,6 @@
   # Enable VirtualBox for virtualization
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
-  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -134,6 +134,7 @@
   programs.sway.enable = true;
   programs.sway.extraPackages = with pkgs; [
     dmenu
+    gimp
     gnome3.zenity
     grim
     light
@@ -152,16 +153,21 @@
     export QT_QPA_PLATFORM=xcb # work around VirtualBox issue 18679
   '';
   programs.waybar.enable = true;
+  programs.light.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.desktopManager.xfce.thunarPlugins = [
     pkgs.xfce.thunar-archive-plugin
     pkgs.xfce.thunar-volman
   ];
+  services.redshift.package = pkgs.redshift-wlr;
+  services.redshift.enable = true;
+  location.provider = "geoclue2";
+  services.actkbd.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lunasspecto = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "vboxusers" "wheel" ];
+    extraGroups = [ "networkmanager" "vboxusers" "video" "wheel" ];
   };
 
   # This value determines the NixOS release from which the default

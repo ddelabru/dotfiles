@@ -22,7 +22,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/f30/extras/i-see-stars.jpg fill
+output * bg /home/lunasspecto/Pictures/sutro-baths.jpeg fill
 
 #
 # Example configuration:
@@ -248,7 +248,7 @@ exec_always {
 
 
 # Startup programs
-exec redshift
+exec redshift-gtk
 exec mako
 
 include /etc/sway/config.d/*
