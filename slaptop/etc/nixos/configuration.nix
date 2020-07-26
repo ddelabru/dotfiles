@@ -61,6 +61,7 @@
     firefox-wayland
     frotz
     git
+    gnupg1
     lesspass-cli
     kitty
     libreoffice
@@ -73,6 +74,7 @@
     purple-lurch
     python3
     thunderbird
+    tldr
     toilet
     tor-browser-bundle-bin
     vim
