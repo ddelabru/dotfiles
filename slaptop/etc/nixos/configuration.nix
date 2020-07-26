@@ -70,6 +70,7 @@
     mpv
     mupdf
     neofetch
+    p7zip
     pidgin
     podman
     purple-lurch
@@ -78,6 +79,7 @@
     tldr
     toilet
     tor-browser-bundle-bin
+    unzip
     vim
     vscodium
     wget
