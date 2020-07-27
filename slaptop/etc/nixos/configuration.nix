@@ -20,11 +20,12 @@
   networking.networkmanager.enable = true;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
+
+  # Laptop has no ethernet port
+  networking.interfaces.eth0.virtual = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -165,6 +166,9 @@
   services.redshift.enable = true;
   location.provider = "geoclue2";
   services.actkbd.enable = true;
+
+  # Let desktop environments handle the power key
+  services.logind.extraConfig = "HandlePowerKey=ignore";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lunasspecto = {
