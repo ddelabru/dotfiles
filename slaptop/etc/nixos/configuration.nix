@@ -64,8 +64,9 @@
     geoclue2
     git
     gnupg1
-    lesspass-cli
+    inetutils
     kitty
+    lesspass-cli
     libreoffice
     mosh
     mpv
