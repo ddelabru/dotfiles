@@ -81,6 +81,7 @@
     tldr
     toilet
     tor-browser-bundle-bin
+    tree
     unzip
     vim
     vscodium
