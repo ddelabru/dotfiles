@@ -52,7 +52,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     alacritty
-    audacity
+    # audacity
     blackbird
     calibre
     cowsay
@@ -65,6 +65,7 @@
     git
     gnupg1
     inetutils
+    inform6
     kitty
     lesspass-cli
     libreoffice
@@ -77,6 +78,7 @@
     podman
     purple-lurch
     python3
+    sfrotz
     thunderbird
     tldr
     toilet
@@ -119,6 +121,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.hplipWithPlugin ];
 
   # Enable sound.
   sound.enable = true;
@@ -155,7 +158,6 @@
     export GTK_THEME=Blackbird
     export GTK_ICON_THEME=Tango
     export MOZ_ENABLE_WAYLAND=1
-    export QT_QPA_PLATFORM=xcb # work around VirtualBox issue 18679
   '';
   programs.waybar.enable = true;
   programs.light.enable = true;

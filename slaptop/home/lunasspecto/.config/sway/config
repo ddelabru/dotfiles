@@ -33,7 +33,6 @@ output * bg /home/lunasspecto/Pictures/sutro-baths.jpeg fill
 default_border none
 smart_gaps enabled
 gaps inner 5
-for_window [class="Spotify"] opacity 0.7
 for_window [app_id="zenity"] floating on
 
 ### Idle configuration
