@@ -44,8 +44,18 @@
   # Fonts
   fonts.fonts = with pkgs; [
     font-awesome # Needed for waybar icons
+    inconsolata
     lato
+    national-park-typeface
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-emoji-blob-bin
+    noto-fonts-extra
   ];
+  fonts.fontconfig.defaultFonts.emoji = [ "Blobmoji" ];
+  fonts.fontconfig.defaultFonts.sansSerif = [ "Lato" ];
+  fonts.fontconfig.defaultFonts.monospace = [ "Inconsolata" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -64,6 +74,7 @@
     geoclue2
     gimp
     git
+    gnome3.gnome-characters
     gnupg1
     inetutils
     inform6
