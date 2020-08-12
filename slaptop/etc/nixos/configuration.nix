@@ -52,7 +52,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     alacritty
-    # audacity
+    audacity
     blackbird
     calibre
     cowsay
@@ -62,6 +62,7 @@
     firefox-wayland
     frotz
     geoclue2
+    gimp
     git
     gnupg1
     inetutils
@@ -141,13 +142,12 @@
   services.xserver.displayManager.sddm.enable = true;
   programs.sway.enable = true;
   programs.sway.extraPackages = with pkgs; [
-    dmenu
-    gimp
     gnome3.zenity
     grim
     light
     mako
     redshift-wlr
+    rofi
     swayidle
     swaylock
     waybar
